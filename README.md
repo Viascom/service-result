@@ -23,9 +23,11 @@ Service result is a structural pattern for RESTful Web Services. This pattern pr
 ```
 ___
 
-## Getting started
+## Using service-result
 
-### maven
+You can add service-result to your project by the following Maven or Gradle dependency.
+
+### Maven
 ```xml
 <dependency>
     <groupId>ch.viascom.groundwork</groupId>
@@ -34,10 +36,11 @@ ___
 </dependency>
 ```
 
-### gradle
+### Gradle
 ```
 compile 'ch.viascom.groundwork:service-result:1.2.2'
-```
+``` 
+___
 
 ## Structure of a service-result
 
