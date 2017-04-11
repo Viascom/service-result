@@ -2,6 +2,12 @@
 [![Build Status](https://travis-ci.org/Viascom/service-result.svg?branch=develop)](https://travis-ci.org/Viascom/service-result)
 ___
 
+## Table of Contents
+1. [What is service-result](##What-is-service-result)
+2. [Using service-result](##Using-service-result)
+3. [Structure of a service-result](##Structure-of-a-service-result)
+4. [License](##License)
+
 ## What is service-result
 
 Service result is a structural pattern for RESTful Web Services. This pattern provides a type safe and well structured response format. The surplus value is that you will always get a service-result regardless of whether the response is successful, failed, expected or an error. This is an example for a service-result:
