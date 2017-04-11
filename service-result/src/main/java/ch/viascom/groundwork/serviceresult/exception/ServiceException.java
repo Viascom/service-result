@@ -1,6 +1,7 @@
 package ch.viascom.groundwork.serviceresult.exception;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.ByteArrayOutputStream;
@@ -9,6 +10,7 @@ import java.io.PrintStream;
 /**
  * Throwable Wrapper of the ServiceFault.
  */
+@NoArgsConstructor
 public class ServiceException extends Exception {
 
     /**
@@ -20,13 +22,6 @@ public class ServiceException extends Exception {
     @Setter
     @Getter
     protected ServiceFault fault;
-
-    /**
-     * Constructor.
-     */
-    public ServiceException() {
-
-    }
 
     /**
      * Constructor.

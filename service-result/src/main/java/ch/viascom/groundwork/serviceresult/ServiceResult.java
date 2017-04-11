@@ -17,6 +17,7 @@ import java.util.HashMap;
  */
 @Data
 public class ServiceResult<T extends Serializable> implements Serializable {
+
     private ServiceResultStatus status;
     private String type;
     private T content;
