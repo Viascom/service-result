@@ -1,9 +1,10 @@
 # service-result
 [![Build Status](https://travis-ci.org/Viascom/service-result.svg?branch=develop)](https://travis-ci.org/Viascom/service-result)
+___
 
 ## What is service-result
 
-Service result is a structural pattern for RESTful Web Services. This pattern provides a type safe and well structured response format. The surplus value is that you alway will get a service-result regardless of whether the response is successful, failed, expected or an error. This is an example for a service-result:
+Service result is a structural pattern for RESTful Web Services. This pattern provides a type safe and well structured response format. The surplus value is that you will always get a service-result regardless of whether the response is successful, failed, expected or an error. This is an example for a service-result:
 
 ```
 {
@@ -20,3 +21,15 @@ Service result is a structural pattern for RESTful Web Services. This pattern pr
   "metadata": {}
 }
 ```
+___
+
+## Structure of a service-result
+
+| element		| explanation 																							|
+| ------------- | ----------------------------------------------------------------------------------------------------- | 
+| status		| can be successful or failed and is a logical answer to the question: Do you got what you asked for?	|
+| type			| fully qualified name																					|
+| content		| your plain serialized information																		|
+| hash			| hash of the content																					|
+| destination	| information about the transmitter																		|
+| metadata		| key-value pairs for additional data																	|
