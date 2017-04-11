@@ -4,4 +4,4 @@ sudo: false
 
 jdk: oraclejdk8
 
-script: mvn clean verify install -P full-build
+script: cd service-result && mvn clean verify install -P full-build
