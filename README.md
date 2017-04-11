@@ -3,10 +3,10 @@
 ___
 
 ## Table of Contents
-1. [What is service-result](##What-is-service-result)
-2. [Using service-result](##Using-service-result)
-3. [Structure of a service-result](##Structure-of-a-service-result)
-4. [License](##License)
+1. [What is service-result](#what-is-service-result)
+2. [Using service-result](#using-service-result)
+3. [Structure of a service-result](#structure-of-a-service-result)
+4. [License](#license)
 
 ## What is service-result
 
