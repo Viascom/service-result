@@ -23,8 +23,10 @@ Service result is a structural pattern for RESTful Web Services. This pattern pr
     }
   ],
   "hash": "7bf9c04d1e9f8fe7995e4b8beeac1a4c830e7ea",
-  "destination": null,
-  "metadata": {}
+  "destination": "ch.viascom.example.handler.TaskHandler",
+  "metadata": {
+  
+  }
 }
 ```
 ___
@@ -45,18 +47,18 @@ You can add service-result to your project by the following Maven or Gradle depe
 ### Gradle
 ```
 compile 'ch.viascom.groundwork:service-result:1.2.2'
-``` 
+```
 ___
 
 ## Structure of a service-result
 
 | element		| explanation 																							|
-| ------------- | ----------------------------------------------------------------------------------------------------- | 
+| ------------- | ----------------------------------------------------------------------------------------------------- |
 | status		| can be successful or failed and is the logical answer to the question: Do you got what you asked for?	|
 | type			| fully qualified name																					|
 | content		| your plain serialized information																		|
 | hash			| hash of the content																					|
-| destination	| information about the transmitter																		|
+| destination	| information about where the response should go (useful for queques and streams)						|													|
 | metadata		| key-value pairs for additional data																	|
 
 ## License
