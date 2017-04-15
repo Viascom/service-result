@@ -49,6 +49,9 @@ public class ServiceFault implements Serializable {
         this.requestedType = requestedType.getCanonicalName();
     }
 
+    public void setRequestedType(String requestedType){
+        this.requestedType = requestedType;
+    }
 
     /**
      * Adds a name-value pair to the request parameter list.
