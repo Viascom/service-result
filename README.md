@@ -40,13 +40,13 @@ You can add service-result to your project by the following Maven or Gradle depe
 <dependency>
     <groupId>ch.viascom.groundwork</groupId>
     <artifactId>service-result</artifactId>
-    <version>1.2.2</version>
+    <version>1.3</version>
 </dependency>
 ```
 
 ### Gradle
 ```
-compile 'ch.viascom.groundwork:service-result:1.2.2'
+compile 'ch.viascom.groundwork:service-result:1.3'
 ```
 ___
 
