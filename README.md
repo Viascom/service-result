@@ -54,12 +54,12 @@ ___
 
 | element		| explanation 																							|
 | ------------- | ----------------------------------------------------------------------------------------------------- |
-| status		| can be successful or failed and is the logical answer to the question: Do you got what you asked for?	|
-| type			| fully qualified name																					|
+| status		| can be successful or failed and is the logical answer to the question: Did you got what you asked for?	|
+| type			| fully qualified name of the model																					|
 | content		| your plain serialized information																		|
 | hash			| hash of the content																					|
-| destination	| information about where the response should go (useful for queques and streams)						|													|
-| metadata		| key-value pairs for additional data																	|
+| destination	| information about where the response should go (useful for queues and streams)						|													|
+| metadata		| key-value pairs for additional related data																	|
 
 ## License
 
