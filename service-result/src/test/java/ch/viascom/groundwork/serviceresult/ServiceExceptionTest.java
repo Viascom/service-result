@@ -22,9 +22,11 @@ public class ServiceExceptionTest {
         serviceFault.setCode("ILLEGAL_ARGUMENT_EXCEPTION");
         serviceFault.setMessage("The argument 'productUD' is unknown");
         serviceFault.setRequestedType(ServiceResult.class);
+        serviceFault.setRequestedType(ServiceResult.class.getCanonicalName());
         serviceFault.setRequestUrl("/data/getUser");
         serviceFault.setResponseCode(500);
         serviceFault.setException(illegalArgumentException.toString());
+
 
         NameValuePair nameValuePair_1 = new NameValuePair("userId", "45678");
         NameValuePair nameValuePair_2 = new NameValuePair("productUD", "1234");
@@ -64,6 +66,7 @@ public class ServiceExceptionTest {
         serviceException.setException(illegalArgumentException);
         serviceException.setResponseCode(500);
         serviceException.setRequestedType(ServiceResult.class);
+        serviceException.setRequestedType(ServiceResult.class.getCanonicalName());
         serviceException.setRequestUrl("/data/getUser");
         serviceException.addRequestParameter("userID", "45678");
 
@@ -78,6 +81,7 @@ public class ServiceExceptionTest {
         ServiceException serviceException_2 = new ServiceException("ILLEGAL_ARGUMENT_EXCEPTION", "The argument 'productUD' is unknown", 500);
         serviceException_2.setException(illegalArgumentException);
         serviceException_2.setRequestedType(ServiceResult.class);
+        serviceException_2.setRequestedType(ServiceResult.class.getCanonicalName());
         serviceException_2.setRequestUrl("/data/getUser");
         serviceException_2.addRequestParameter("userID", "45678");
 
