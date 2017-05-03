@@ -35,16 +35,6 @@ public class ServiceFault implements Serializable {
         message = serviceFaultMessage;
     }
 
-    public ServiceFault setException(String serviceFaultException) {
-        exception = serviceFaultException;
-        return this;
-    }
-
-    public ServiceFault setRequestUrl(String url) {
-        requestUrl = url;
-        return this;
-    }
-
     public void setRequestedType(Class requestedType){
         this.requestedType = requestedType.getCanonicalName();
     }

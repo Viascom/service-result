@@ -74,18 +74,23 @@ public class ServiceException extends Exception {
         return this;
     }
 
-    public ServiceException setRequestedType(Class<?> type) {
-        this.fault.setRequestedType(type);
+    public ServiceException setRequestedType(Class<?> requestedType) {
+        this.fault.setRequestedType(requestedType);
         return this;
     }
 
-    public ServiceException setRequestUrl(String url) {
-        this.fault.setRequestUrl(url);
+    public ServiceException setRequestedType(String requestedType){
+        this.fault.setRequestedType(requestedType);
         return this;
     }
 
-    public ServiceException setResponseStatusCode(int status) {
-        this.fault.setResponseStatusCode(status);
+    public ServiceException setRequestUrl(String requestedUrl) {
+        this.fault.setRequestUrl(requestedUrl);
+        return this;
+    }
+
+    public ServiceException setResponseCode(int code) {
+        this.fault.setResponseStatusCode(code);
         return this;
     }
 
