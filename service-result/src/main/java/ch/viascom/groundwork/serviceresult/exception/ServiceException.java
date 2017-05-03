@@ -53,7 +53,7 @@ public class ServiceException extends Exception {
         super(message);
 
         this.fault = new ServiceFault(exceptionCode, message);
-        this.fault.setResponseStatusCode(responseStatusCode);
+        this.fault.setResponseCode(responseStatusCode);
     }
 
     /**
@@ -90,7 +90,7 @@ public class ServiceException extends Exception {
     }
 
     public ServiceException setResponseCode(int code) {
-        this.fault.setResponseStatusCode(code);
+        this.fault.setResponseCode(code);
         return this;
     }
 

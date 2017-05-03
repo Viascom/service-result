@@ -20,7 +20,7 @@ public class ServiceFault implements Serializable {
     protected String requestUrl;
     protected String requestedType;
 
-    protected int responseStatusCode = 500;
+    protected int responseCode = 500;
     protected List<NameValuePair> requestParams;
     protected String exception;
 
