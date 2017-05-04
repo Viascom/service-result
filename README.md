@@ -1,4 +1,6 @@
 # service-result
+
+[![Join the chat at https://gitter.im/Viascom/service-result](https://badges.gitter.im/Viascom/service-result.svg)](https://gitter.im/Viascom/service-result?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://travis-ci.org/Viascom/service-result.svg?branch=develop)](https://travis-ci.org/Viascom/service-result)
 ___
 
