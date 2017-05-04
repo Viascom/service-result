@@ -1,6 +1,7 @@
 package ch.viascom.groundwork.serviceresult.exception;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.ByteArrayOutputStream;
@@ -9,6 +10,7 @@ import java.io.PrintStream;
 /**
  * Throwable Wrapper of the ServiceFault.
  */
+@NoArgsConstructor
 public class ServiceException extends Exception {
 
     /**
@@ -20,13 +22,6 @@ public class ServiceException extends Exception {
     @Setter
     @Getter
     protected ServiceFault fault;
-
-    /**
-     * Constructor.
-     */
-    public ServiceException() {
-
-    }
 
     /**
      * Constructor.
@@ -58,7 +53,7 @@ public class ServiceException extends Exception {
         super(message);
 
         this.fault = new ServiceFault(exceptionCode, message);
-        this.fault.setResponseStatusCode(responseStatusCode);
+        this.fault.setResponseCode(responseStatusCode);
     }
 
     /**
@@ -79,18 +74,23 @@ public class ServiceException extends Exception {
         return this;
     }
 
-    public ServiceException setRequestedType(Class<?> type) {
-        this.fault.setRequestedType(type);
+    public ServiceException setRequestedType(Class<?> requestedType) {
+        this.fault.setRequestedType(requestedType);
         return this;
     }
 
-    public ServiceException setRequestUrl(String url) {
-        this.fault.setRequestUrl(url);
+    public ServiceException setRequestedType(String requestedType){
+        this.fault.setRequestedType(requestedType);
         return this;
     }
 
-    public ServiceException setResponseStatusCode(int status) {
-        this.fault.setResponseStatusCode(status);
+    public ServiceException setRequestUrl(String requestedUrl) {
+        this.fault.setRequestUrl(requestedUrl);
+        return this;
+    }
+
+    public ServiceException setResponseCode(int code) {
+        this.fault.setResponseCode(code);
         return this;
     }
 

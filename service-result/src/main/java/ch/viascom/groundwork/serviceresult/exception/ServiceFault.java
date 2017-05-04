@@ -2,6 +2,7 @@ package ch.viascom.groundwork.serviceresult.exception;
 
 import ch.viascom.groundwork.serviceresult.util.NameValuePair;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ import java.util.List;
  * Represents a wrapped exception including some extra data.
  */
 @Data
+@NoArgsConstructor
 public class ServiceFault implements Serializable {
 
     protected String code;
@@ -18,16 +20,9 @@ public class ServiceFault implements Serializable {
     protected String requestUrl;
     protected String requestedType;
 
-    protected int responseStatusCode = 500;
+    protected int responseCode = 500;
     protected List<NameValuePair> requestParams;
     protected String exception;
-
-    /**
-     * Constructor.
-     */
-    public ServiceFault() {
-
-    }
 
     /**
      * Constructor.
@@ -40,20 +35,13 @@ public class ServiceFault implements Serializable {
         message = serviceFaultMessage;
     }
 
-    public ServiceFault setException(String serviceFaultException) {
-        exception = serviceFaultException;
-        return this;
-    }
-
-    public ServiceFault setRequestUrl(String url) {
-        requestUrl = url;
-        return this;
-    }
-
     public void setRequestedType(Class requestedType){
         this.requestedType = requestedType.getCanonicalName();
     }
 
+    public void setRequestedType(String requestedType){
+        this.requestedType = requestedType;
+    }
 
     /**
      * Adds a name-value pair to the request parameter list.

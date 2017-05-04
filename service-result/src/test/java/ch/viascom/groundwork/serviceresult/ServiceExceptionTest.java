@@ -22,9 +22,11 @@ public class ServiceExceptionTest {
         serviceFault.setCode("ILLEGAL_ARGUMENT_EXCEPTION");
         serviceFault.setMessage("The argument 'productUD' is unknown");
         serviceFault.setRequestedType(ServiceResult.class);
+        serviceFault.setRequestedType(ServiceResult.class.getCanonicalName());
         serviceFault.setRequestUrl("/data/getUser");
-        serviceFault.setResponseStatusCode(500);
+        serviceFault.setResponseCode(500);
         serviceFault.setException(illegalArgumentException.toString());
+
 
         NameValuePair nameValuePair_1 = new NameValuePair("userId", "45678");
         NameValuePair nameValuePair_2 = new NameValuePair("productUD", "1234");
@@ -44,7 +46,7 @@ public class ServiceExceptionTest {
         assertThat(serviceException.getFault().getCode()).isEqualTo("ILLEGAL_ARGUMENT_EXCEPTION");
         assertThat(serviceException.getFault().getMessage()).isEqualTo("The argument 'productUD' is unknown");
         assertThat(serviceException.getFault().getRequestUrl()).isEqualTo("/data/getUser");
-        assertThat(serviceException.getFault().getResponseStatusCode()).isEqualTo(500);
+        assertThat(serviceException.getFault().getResponseCode()).isEqualTo(500);
         assertThat(serviceException.getFault().getRequestParams().get(0).getValue()).isEqualTo("45678");
 
         ServiceException serviceException_2 = new ServiceException(serviceFault);
@@ -52,7 +54,7 @@ public class ServiceExceptionTest {
         assertThat(serviceException_2.getFault().getCode()).isEqualTo("ILLEGAL_ARGUMENT_EXCEPTION");
         assertThat(serviceException_2.getFault().getMessage()).isEqualTo("The argument 'productUD' is unknown");
         assertThat(serviceException_2.getFault().getRequestUrl()).isEqualTo("/data/getUser");
-        assertThat(serviceException_2.getFault().getResponseStatusCode()).isEqualTo(500);
+        assertThat(serviceException_2.getFault().getResponseCode()).isEqualTo(500);
         assertThat(serviceException_2.getFault().getRequestParams().get(0).getValue()).isEqualTo("45678");
     }
 
@@ -62,8 +64,9 @@ public class ServiceExceptionTest {
 
         ServiceException serviceException = new ServiceException("ILLEGAL_ARGUMENT_EXCEPTION", "The argument 'productUD' is unknown");
         serviceException.setException(illegalArgumentException);
-        serviceException.setResponseStatusCode(500);
+        serviceException.setResponseCode(500);
         serviceException.setRequestedType(ServiceResult.class);
+        serviceException.setRequestedType(ServiceResult.class.getCanonicalName());
         serviceException.setRequestUrl("/data/getUser");
         serviceException.addRequestParameter("userID", "45678");
 
@@ -71,13 +74,14 @@ public class ServiceExceptionTest {
         assertThat(serviceException.getFault().getCode()).isEqualTo("ILLEGAL_ARGUMENT_EXCEPTION");
         assertThat(serviceException.getFault().getMessage()).isEqualTo("The argument 'productUD' is unknown");
         assertThat(serviceException.getFault().getRequestUrl()).isEqualTo("/data/getUser");
-        assertThat(serviceException.getFault().getResponseStatusCode()).isEqualTo(500);
+        assertThat(serviceException.getFault().getResponseCode()).isEqualTo(500);
         assertThat(serviceException.getFault().getRequestParams().get(0).getValue()).isEqualTo("45678");
 
 
         ServiceException serviceException_2 = new ServiceException("ILLEGAL_ARGUMENT_EXCEPTION", "The argument 'productUD' is unknown", 500);
         serviceException_2.setException(illegalArgumentException);
         serviceException_2.setRequestedType(ServiceResult.class);
+        serviceException_2.setRequestedType(ServiceResult.class.getCanonicalName());
         serviceException_2.setRequestUrl("/data/getUser");
         serviceException_2.addRequestParameter("userID", "45678");
 
@@ -85,7 +89,7 @@ public class ServiceExceptionTest {
         assertThat(serviceException_2.getFault().getCode()).isEqualTo("ILLEGAL_ARGUMENT_EXCEPTION");
         assertThat(serviceException_2.getFault().getMessage()).isEqualTo("The argument 'productUD' is unknown");
         assertThat(serviceException_2.getFault().getRequestUrl()).isEqualTo("/data/getUser");
-        assertThat(serviceException_2.getFault().getResponseStatusCode()).isEqualTo(500);
+        assertThat(serviceException_2.getFault().getResponseCode()).isEqualTo(500);
         assertThat(serviceException_2.getFault().getRequestParams().get(0).getValue()).isEqualTo("45678");
 
     }

@@ -44,15 +44,16 @@ public class ServiceResultTest {
     public void ServiceResultMetadata() {
         ServiceResult<String> result = new ServiceResult<>(String.class, "Content", ServiceResultStatus.successful);
         result.addMetadata("ch.viascom.groundwork.test", new Metadata(String.class, "Metadata"));
+
         assertThat(result.getContent()).isEqualTo("Content");
         assertThat(result.getStatus()).isEqualTo(ServiceResultStatus.successful);
         assertThat(result.getType()).isEqualTo(String.class.getCanonicalName());
         assertThat(result.getMetadata().get("ch.viascom.groundwork.test").getContent()).isEqualTo("Metadata");
         assertThat(result.getMetadata().get("ch.viascom.groundwork.test").getType()).isEqualTo(String.class.getCanonicalName());
 
-        ServiceResult<String> result2 = new ServiceResult<>(String.class, "Content", ServiceResultStatus.successful);
+        ServiceResult<String> result2 = new ServiceResult<>(String.class.getCanonicalName(), "Content", ServiceResultStatus.successful);
 
-        Metadata<Integer> integerMetadata = new Metadata<>(Integer.class);
+        Metadata<Integer> integerMetadata = new Metadata<>(Integer.class.getCanonicalName());
         integerMetadata.setContent(12);
 
         result2.addMetadata("ch.viascom.groundwork.test", integerMetadata);
