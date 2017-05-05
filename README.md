@@ -1,6 +1,4 @@
-# service-result
-[![Build Status](https://travis-ci.org/Viascom/service-result.svg?branch=develop)](https://travis-ci.org/Viascom/service-result)
-<a title="Gitter" href="https://gitter.im/Viascom/service-result?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg"></a>
+# service-result [![Build Status](https://travis-ci.org/Viascom/service-result.svg?branch=develop)](https://travis-ci.org/Viascom/service-result) [![Join the chat at https://gitter.im/Viascom/service-result](https://badges.gitter.im/Viascom/service-result.svg)](https://gitter.im/Viascom/service-result?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 ___
 
 ## Table of Contents
