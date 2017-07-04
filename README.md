@@ -38,13 +38,13 @@ You can add service-result to your project by the following Maven or Gradle depe
 <dependency>
     <groupId>ch.viascom.groundwork</groupId>
     <artifactId>service-result</artifactId>
-    <version>1.3.1</version>
+    <version>1.4</version>
 </dependency>
 ```
 
 ### Gradle
 ```
-compile 'ch.viascom.groundwork:service-result:1.3.1'
+compile 'ch.viascom.groundwork:service-result:1.4'
 ```
 ___
 
@@ -61,4 +61,4 @@ ___
 
 ## License
 
-[GNU General Public License v3.0](https://github.com/Viascom/service-result/blob/develop/LICENSE)
+[Apache License, Version 2.0, January 2004](http://www.apache.org/licenses/)
